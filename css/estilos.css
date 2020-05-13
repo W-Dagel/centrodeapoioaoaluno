@@ -1,6 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
 body{
     background-image: url(https://media.istockphoto.com/photos/apple-chalk-on-wooden-school-desk-with-chalkboard-picture-id1154082033?k=6&m=1154082033&s=170667a&w=0&h=1o5IHK5U1wFfP-6Bq-bg8JcPAE7zil9au8ZjU37E_1E=);
-    background-size: 1200px 600px;
+    background-size: 970px 600px;
   }
   
   .menu {

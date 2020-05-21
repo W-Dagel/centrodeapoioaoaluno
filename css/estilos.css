@@ -2,67 +2,242 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
-body{
-    background-image: url(https://media.istockphoto.com/photos/apple-chalk-on-wooden-school-desk-with-chalkboard-picture-id1154082033?k=6&m=1154082033&s=170667a&w=0&h=1o5IHK5U1wFfP-6Bq-bg8JcPAE7zil9au8ZjU37E_1E=);
-    background-size: 970px 600px;
+
+/******** ESPECIFICAÇÕES GERAIS ********/
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body  {
+  background: BlanchedAlmond;
+  background-image: url();
+  background-size: auto 100vh;
+  font-family: Snell Roundhand, cursive;
+  height: 100vh;
+  font-size: 10px;
+}
+
+/************ BODY RESPONSIVO *********/
+@media (min-width: 400px) {
+  body {
+    font-size: 12px;
   }
-  
-  .menu {
-    background-image: linear-gradient(to bottom, rgba(255,255,255,.0), rgba(255,255,255,.3));
+}
+
+@media (min-width: 600px) {
+  body {
+    font-size: 16px;
   }
-  
-  .menu li {
-    list-style: none;
+}
+
+@media (min-width: 800px) {
+  body {
+    font-size: 20px;
   }
-  
-  .menu ul {
-    display: flex;
-    justify-content: space-around;
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 22px;
   }
-  
-  .site-title {
-    color: darkorange;
-    line-height: ;
-    text-align: center;
-    font-size: 250%;
-    font-weight: 100;
-    text-shadow:#000 -3px -1px 4px;
-    
+}
+
+/********* ANIMAÇÃO TÍTULO ********/
+.titulo {
+  animation: linear .7s animatit forwards;
+}
+
+@keyframes animatit {
+  from {
+    transform: scale(0.2) translateY(75vh);
+    opacity: .3;
   }
-  
-  .site-subtitle {
-    color: darkorange;
-    line-height: 70%;
-    text-align: center;
-    font-style: arial;
-    font-size: 175%;
-    font-weight: 300;
-    text-shadow:#000 -2px 1px 2px;
+
+  to {
+    transform: scale(1) translateY(0);
   }
-  
-  p {
-    color: orange;
-    text-align: center;
-    font-size: 175%;
-    font-weight: 300;
-    text-shadow:#000 2px 2px 1px;
-    
+}
+
+.subtitulo {
+  animation: linear .7s animasub forwards;
+}
+
+@keyframes animasub {
+  from {
+    transform: scale(0.2) translateY(50vh);
+    opacity: .3;
   }
-  a {
-    color: darkorange;
-    text-decoration: none;
+
+  to {
+    transform: scale(1) translateY(0);
   }
-  
-  a:hover{
-    color: orangered;
+}
+
+.site-subtitle,
+.site-title {
+  text-align: center;
+  color: black;
+  font-size: 2em;
+}
+
+.site-subtitle {
+  color: black;
+}
+
+ /************* LINK LOGO ***********/
+.logo {
+  background-color: white;
+  opacity: 0.9;
+  position: fixed;
+  height: 15vw;
+  width: 22vw;
+  border-bottom-left-radius: 12vw;
+  border-bottom-right-radius: 12vw;
+  top: 10.5vw;
+  z-index: 1;
+}
+
+.logo li {
+  list-style: none;
+  font-size: 6vw;
+}
+
+.logo ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo a {
+  color: peachpuff;
+  display: block;
+  padding: 3.5vw;
+  position: relative;
+    letter-spacing: 0.3vw;
+    left: 1.3vw;
+    top: 1vw;
+  transition: color 1s;
+  transition: transform 0.3s;
+}
+
+.logo a:hover {
+  color: orange;
+  transform: rotate(7deg);
+}
+
+/******* LINK MENU *******/
+.menu {
+  background-color: white;
+  position: fixed;
+  width: 100vw;
+  height: 15vw;
+  top: 0;
+  z-index: 2;
+}
+
+.menu li {
+  list-style: none;
+  font-family: 'Sacramento', cursive;
+  font-size: 4vw;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu a {
+  color: peachpuff;
+  display: block;
+  padding: 5vw;
+  border-bottom-left-radius: 4vw;
+  border-bottom-right-radius: 4vw;
+  transition: background-color 1s, color 2s;
+}
+
+.menu a:hover {
+  background-color: orange;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
+
+.contato h2,
+.portfolio h2 {
+  font-family: Arial;
+  font-size: 2em;
+  margin-bottom: 2em;
+  text-align: center;
+} 
+
+.portfolio .grid {
+  display: grid;
+  gap: 1em;
+  justify-content: center;
+}
+
+
+@media (min-width: 520px) {
+  .portfolio .grid {
+    grid-template-columns: 200px 200px;
   }
-  
-  hr {
-        color: orange;
-        background-color: transparent;
-        height: 5px;
-        border-top: 3px dashed darkorange;
-        border-bottom: 2px solid orange;  
-  }
+}
+
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 180px;
+  width: 180px;
+  object-fit: cover;
+  object-position: left bottom;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: transform 0.5s;
+}
+
+.img-portfolio:hover {
+  transform: scale(1.1);
+}
+
+.contato a {
+  color: orange;
+  font-size: 5em;
+}
+
+.contato a:hover {
+  text-shadow: 5px 5px 1px black;
+}
+
+a.youtube:hover {
+  color: rgb(202, 16, 16);
+}
+
+a.instagram:hover {
+  color: white;
+}
+
+a.twitter:hover {
+  color: rgb(10, 120, 245);
+}
+
+a.whats:hover {
+  color: rgb(17, 212, 17); 
+}
+
+a.email:hover {
+  color: white;
+}

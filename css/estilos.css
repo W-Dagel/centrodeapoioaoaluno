@@ -144,23 +144,37 @@ a {
   background-image: linear-gradient( to bottom, transparent, orange);
   color: white;
 }
+/****** ACOMPANHAMENTO ********/
+.acomp {
+  min-height: 120vh;
+  padding: 2em;
+}
 
-/******** PORTFOLIO **********/
-.contato,
-.portfolio {
+.acomp h2{
+  font-family: 'Sacramento', cursive;
+  font-size: 2em;
+  margin-bottom: 2em;
+  margin-top: 2.5em;
+  text-align: center;
+  color: orange;
+}
+
+/******** NEWS **********/
+.news {
   padding: 2em;
   min-height: 100vh;
 }
 
-.contato h2,
-.portfolio h2 {
+.news h2 {
   font-family: 'Sacramento', cursive;
   font-size: 2em;
   margin-bottom: 2em;
+  margin-top: 2.5em;
   text-align: center;
+  color: orange;
 } 
 
-.portfolio .grid {
+.news .grid {
   display: grid;
   gap: 1em;
   justify-content: center;
@@ -168,17 +182,16 @@ a {
 
 
 @media (min-width: 520px) {
-  .portfolio .grid {
+  .news .grid {
     grid-template-columns: 200px 200px;
   }
 }
 
-
-.portfolio figure {
+.news figure {
   text-align: center;
 }
 
-.img-portfolio {
+.img-news {
   height: 180px;
   width: 180px;
   object-fit: cover;
@@ -188,13 +201,92 @@ a {
   transition: transform 0.5s;
 }
 
-.img-portfolio:hover {
+.img-news:hover {
   transform: scale(1.1);
 }
 
+/********* VESTIBULAR ********/
+.vest {
+  padding: 2em;
+  min-height: 120vh;
+}
+
+.vest h2 {
+  font-family: 'Sacramento', cursive;
+  font-size: 2em;
+  margin-bottom: 2em;
+  margin-top: 2.5em;
+  text-align: center;
+  color: orange;
+}
+
+.vest .grid {
+  display: grid;
+  justify-content: center;
+  gap: 1em;
+}
+
+.vest-iframe {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.vest-iframe:hover {
+  animation: linear .07s animavest forwards;
+}
+
+/********* ANIMAÇÃO FRAME ******/
+@keyframes animavest {
+0% {
+    transform: scale(1);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+
+  25% {
+    transform: scale(1.1);
+    height: 217.5px;
+    width: 270px;
+    border-radius: 40%;
+
+  }
+
+  50% {
+    transform: scale(1.2);
+    height: 236px;
+    width: 340px;
+    border-radius: 30%;
+  }
+  
+  75% {
+    transform: scale(1.3);
+    height: 253.5px;
+    width: 410px;
+    border-radius: 20%;
+  }
+
+  100% {
+    transform: scale(1.4);
+    width: 480px;
+    height: 270px;
+    border-radius: 10%;
+  }
+}
+
+/********* CONTATOS *******/
+.contato {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+}
 .contato a {
   color: orange;
-  font-size: 5em;
+  font-size: 3em;
 }
 
 .contato a:hover {
@@ -221,7 +313,7 @@ a.email:hover {
   color: white;
 }
 
-/************ BODY RESPONSIVO *********/
+/************ MENU RESPONSSIVO MOBILE *********/
   @media (min-width: 600px) {
     body {
       font-size: 15px;
@@ -279,7 +371,7 @@ a.email:hover {
     }
   }
 
-/********* MENU/LOGO RESPONSIVO WEB ********/
+/********* MENU RESPONSSIVO WEB ********/
 @media (min-width: 1200px) {
 
   .img-titulo {

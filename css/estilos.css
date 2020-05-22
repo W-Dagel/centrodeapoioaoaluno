@@ -18,52 +18,17 @@ body  {
   background-size: auto 100vh;
   font-family: Snell Roundhand, cursive;
   height: 100vh;
-  font-size: 10px;
+  font-size: 12px;
 }
 
-/************ BODY RESPONSIVO *********/
-@media (min-width: 400px) {
-  body {
-    font-size: 12px;
-  }
+a {
+  text-decoration: none;
 }
 
-@media (min-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 800px) {
-  body {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1000px) {
-  body {
-    font-size: 22px;
-  }
-}
 
 /********* ANIMAÇÃO TÍTULO ********/
-.titulo {
-  animation: linear .7s animatit forwards;
-}
-
-@keyframes animatit {
-  from {
-    transform: scale(0.2) translateY(75vh);
-    opacity: .3;
-  }
-
-  to {
-    transform: scale(1) translateY(0);
-  }
-}
-
 .subtitulo {
-  animation: linear .7s animasub forwards;
+  animation: linear 1s animasub forwards;
 }
 
 @keyframes animasub {
@@ -71,33 +36,45 @@ body  {
     transform: scale(0.2) translateY(50vh);
     opacity: .3;
   }
-
+  
   to {
     transform: scale(1) translateY(0);
   }
 }
+/*********** TITULO *************/
+.img-titulo {
+  object-fit: cover;
+  object-position: center;
+  height: 35vw;
+  width: 35vw;
+  border-radius: 50%;
+  transition: transform 0.5s;
+}
 
-.site-subtitle,
-.site-title {
-  text-align: center;
-  color: black;
-  font-size: 2em;
+.img-titulo:hover {
+  transform: scale(1.1);
+}
+.subtitulo figure {
+  margin-left: 8em;
 }
 
 .site-subtitle {
-  color: black;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 1.5em;
+  margin-top: 1em;
+  color: rgb(250, 179, 27);
+  text-align: center;
 }
 
- /************* LINK LOGO ***********/
+/************* LINK LOGO ***********/
 .logo {
   background-color: white;
-  opacity: 0.9;
   position: fixed;
   height: 15vw;
   width: 22vw;
-  border-bottom-left-radius: 12vw;
-  border-bottom-right-radius: 12vw;
-  top: 10.5vw;
+  border-bottom-left-radius: 11vw;
+  border-bottom-right-radius: 11vw;
+  top: 12vw;
   z-index: 1;
 }
 
@@ -116,9 +93,10 @@ body  {
   display: block;
   padding: 3.5vw;
   position: relative;
-    letter-spacing: 0.3vw;
+    letter-spacing: 0.4vw;
     left: 1.3vw;
-    top: 1vw;
+    top: 0vw;
+  text-shadow: black;
   transition: color 1s;
   transition: transform 0.3s;
 }
@@ -141,7 +119,7 @@ body  {
 .menu li {
   list-style: none;
   font-family: 'Sacramento', cursive;
-  font-size: 4vw;
+  font-size: 5vw;
 }
 
 .menu ul {
@@ -152,21 +130,56 @@ body  {
 .menu a {
   color: peachpuff;
   display: block;
-  padding: 5vw;
-  border-bottom-left-radius: 4vw;
-  border-bottom-right-radius: 4vw;
-  transition: background-color 1s, color 2s;
+  padding: 5vw 2vw;
+  border-bottom-left-radius: 6vw;
+  border-bottom-right-radius: 6vw;
+  transition: background-color 5s, color 1.5s;
 }
 
 .menu a:hover {
   background-color: orange;
+  background-image: linear-gradient( to bottom, transparent, orange);
   color: white;
 }
 
-a {
-  text-decoration: none;
+/********* MENU/LOGO RESPONSIVO WEB *********/
+@media (min-width: 1360px) {
+  .logo {
+    height: 5.7vw;
+    width: 8vw;
+    border-bottom-left-radius: 3.7vw;
+    border-bottom-right-radius: 3.7vw;
+    top: 2vw;
+  }
+  
+  .logo li {
+    font-size: 2.5vw;
+  }
+  
+  .logo a {
+    padding: 1vw 2vw;
+    letter-spacing: .3vw;
+    left: .6vw;
+    top: .3vw;
+  }
+  
+  .menu {
+    width: 100vw;
+    height: 3.7vw;
+  }
+
+  .menu li {
+    font-size: 2.2vw;
+  }
+  
+  .menu a {
+    padding: .7vw 5vw;
+    border-bottom-left-radius: 4vw;
+    border-bottom-right-radius: 4vw;
+  }
 }
 
+/******** PORTFOLIO **********/
 .contato,
 .portfolio {
   padding: 2em;
@@ -175,7 +188,7 @@ a {
 
 .contato h2,
 .portfolio h2 {
-  font-family: Arial;
+  font-family: 'Sacramento', cursive;
   font-size: 2em;
   margin-bottom: 2em;
   text-align: center;
@@ -241,3 +254,61 @@ a.whats:hover {
 a.email:hover {
   color: white;
 }
+
+/************ BODY RESPONSIVO *********/
+  @media (min-width: 600px) {
+    body {
+      font-size: 16px;
+    }
+  
+    .img-titulo {
+      height: 15vw;
+      width: 15vw;
+    }
+  
+    .logo {
+      height: 5.7vw;
+      width: 8vw;
+      border-bottom-left-radius: 3.7vw;
+      border-bottom-right-radius: 3.7vw;
+      top: 2vw;
+    }
+      
+    .logo li {
+      font-size: 2.5vw;
+    }
+      
+    .logo a {
+      padding: 1vw 2vw;
+      letter-spacing: .3vw;
+      left: .6vw;
+      top: .3vw;
+    }
+      
+    .menu {
+      width: 105vw;
+      height: 5vw;
+    }
+    
+    .menu li {
+      font-size: 3vw;
+    }
+    
+    .menu a {
+      padding: .9vw 5vw;
+      border-bottom-left-radius: 5vw;
+      border-bottom-right-radius: 5vw;
+    }
+  }
+  
+  @media (min-width: 800px) {
+    body {
+      font-size: 20px;
+    }
+  }
+  
+  @media (min-width: 1000px) {
+    body {
+      font-size: 22px;
+    }
+  }

@@ -5,6 +5,10 @@
 }
 
 /******** ESPECIFICAÇÕES GERAIS ********/
+html{
+  scroll-behavior: smooth;
+}
+
 header {
   height: 100vh;
   display: flex;
@@ -55,7 +59,7 @@ a {
   transform: scale(1.1);
 }
 .subtitulo figure {
-  margin-left: 8em;
+  margin-left: 7em;
 }
 
 .site-subtitle {

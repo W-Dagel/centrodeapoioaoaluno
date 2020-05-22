@@ -5,10 +5,6 @@
 }
 
 /******** ESPECIFICAÇÕES GERAIS ********/
-html{
-  scroll-behavior: smooth;
-}
-
 header {
   height: 100vh;
   display: flex;
@@ -17,11 +13,11 @@ header {
 }
 
 body  {
-  background: BlanchedAlmond;
+  background: rgb(243, 216, 176);
   background-image: url();
   background-size: auto 100vh;
   font-family: Snell Roundhand, cursive;
-  height: 100vh;
+  height: 110vh;
   font-size: 12px;
 }
 
@@ -47,6 +43,7 @@ a {
 }
 /*********** TITULO *************/
 .img-titulo {
+  box-shadow: 4px 2px 10px 2px rgba(0, 0, 0, 0.2);
   object-fit: cover;
   object-position: center;
   height: 35vw;
@@ -58,14 +55,14 @@ a {
 .img-titulo:hover {
   transform: scale(1.1);
 }
-.subtitulo figure {
-  margin-left: 7em;
-}
 
+.subtitulo h1 {
+  text-align: center;
+}
 .site-subtitle {
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 1.5em;
-  margin-top: 1em;
+  margin-top: 1.5em;
   color: rgb(250, 179, 27);
   text-align: center;
 }
@@ -73,6 +70,7 @@ a {
 /************* LINK LOGO ***********/
 .logo {
   background-color: white;
+  box-shadow: 4px 2px 10px 3px rgba(0, 0, 0, 0.2);
   position: fixed;
   height: 15vw;
   width: 22vw;
@@ -113,6 +111,7 @@ a {
 /******* LINK MENU *******/
 .menu {
   background-color: white;
+  box-shadow: 0px 2px 9px 2px rgba(0, 0, 0, 0.2);
   position: fixed;
   width: 100vw;
   height: 15vw;
@@ -134,53 +133,16 @@ a {
 .menu a {
   color: peachpuff;
   display: block;
-  padding: 5vw 2vw;
-  border-bottom-left-radius: 6vw;
-  border-bottom-right-radius: 6vw;
-  transition: background-color 5s, color 1.5s;
+  padding: 4.5vw 2vw;
+  border-bottom-left-radius: 4vw;
+  border-bottom-right-radius: 4vw;
+  transition: background-color 2s, color 1.5s;
 }
 
 .menu a:hover {
   background-color: orange;
   background-image: linear-gradient( to bottom, transparent, orange);
   color: white;
-}
-
-/********* MENU/LOGO RESPONSIVO WEB *********/
-@media (min-width: 1360px) {
-  .logo {
-    height: 5.7vw;
-    width: 8vw;
-    border-bottom-left-radius: 3.7vw;
-    border-bottom-right-radius: 3.7vw;
-    top: 2vw;
-  }
-  
-  .logo li {
-    font-size: 2.5vw;
-  }
-  
-  .logo a {
-    padding: 1vw 2vw;
-    letter-spacing: .3vw;
-    left: .6vw;
-    top: .3vw;
-  }
-  
-  .menu {
-    width: 100vw;
-    height: 3.7vw;
-  }
-
-  .menu li {
-    font-size: 2.2vw;
-  }
-  
-  .menu a {
-    padding: .7vw 5vw;
-    border-bottom-left-radius: 4vw;
-    border-bottom-right-radius: 4vw;
-  }
 }
 
 /******** PORTFOLIO **********/
@@ -262,57 +224,101 @@ a.email:hover {
 /************ BODY RESPONSIVO *********/
   @media (min-width: 600px) {
     body {
-      font-size: 16px;
+      font-size: 15px;
     }
   
     .img-titulo {
-      height: 15vw;
-      width: 15vw;
+      height: 20vw;
+      width: 20vw;
     }
   
     .logo {
       height: 5.7vw;
-      width: 8vw;
-      border-bottom-left-radius: 3.7vw;
-      border-bottom-right-radius: 3.7vw;
-      top: 2vw;
+      width: 10vw;
+      border-bottom-left-radius: 4.7vw;
+      border-bottom-right-radius: 4.7vw;
+      top: 7vw;
     }
       
     .logo li {
-      font-size: 2.5vw;
+      font-size: 3.5vw;
     }
       
     .logo a {
-      padding: 1vw 2vw;
-      letter-spacing: .3vw;
-      left: .6vw;
-      top: .3vw;
+      padding: .1vw 2vw;
+      letter-spacing: .2vw;
+      left: .8vw;
+      top: -.3vw;
     }
       
     .menu {
       width: 105vw;
-      height: 5vw;
+      height: 7vw;
     }
     
     .menu li {
-      font-size: 3vw;
+      font-size: 4vw;
     }
     
     .menu a {
-      padding: .9vw 5vw;
-      border-bottom-left-radius: 5vw;
-      border-bottom-right-radius: 5vw;
+      padding: 1vw 3vw;
+      border-bottom-left-radius: 2vw;
+      border-bottom-right-radius: 2vw;
     }
   }
   
   @media (min-width: 800px) {
     body {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
   
   @media (min-width: 1000px) {
     body {
-      font-size: 22px;
+      font-size: 20px;
     }
   }
+
+/********* MENU/LOGO RESPONSIVO WEB ********/
+@media (min-width: 1200px) {
+
+  .img-titulo {
+    height: 15vw;
+    width: 15vw;
+  }
+
+  .logo {
+    height: 5.7vw;
+    width: 8vw;
+    border-bottom-left-radius: 3.7vw;
+    border-bottom-right-radius: 3.7vw;
+    top: 3vw;
+  }
+  
+  .logo li {
+    font-size: 2.5vw;
+  }
+  
+  .logo a {
+    padding: 1vw 2vw;
+    letter-spacing: .2vw;
+    left: .6vw;
+    top: -.3vw;
+  }
+  
+  .menu {
+    width: 105vw;
+    height: 4vw;
+  }
+
+  .menu li {
+    font-size: 2.2vw;
+  }
+  
+  .menu a {
+    padding: .7vw 5vw;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+  }
+}
+

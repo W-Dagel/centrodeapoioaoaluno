@@ -13,7 +13,7 @@ header {
 }
 
 body  {
-  background: rgb(243, 216, 176);
+  background-color: navajowhite;
   background-image: url();
   background-size: auto 100vh;
   font-family: Snell Roundhand, cursive;
@@ -45,9 +45,10 @@ body p {
   font-family: 'Times New Roman', Times, serif;
   font-size: 1em;
   margin-top: 1em;
+  margin-bottom: 1em;
   margin-left: 2em;
   margin-right: 2em;
-  text-align: justify;
+  text-align: center;
 }
 
 a {
@@ -134,7 +135,7 @@ a {
 }
 
 .logo a {
-  color: peachpuff;
+  color: navajowhite;
   display: block;
   padding: 3.5vw;
   position: relative;
@@ -174,7 +175,7 @@ a {
 }
 
 .menu a {
-  color: peachpuff;
+  color: navajowhite;
   display: block;
   padding: 4.5vw 2vw;
   border-bottom-left-radius: 4vw;
@@ -189,12 +190,14 @@ a {
 }
 /****** ACOMPANHAMENTO ********/
 .acomp {
+  background-color: moccasin;
   min-height: 120vh;
   padding: 2em;
 }
 
 /******** NEWS **********/
 .news {
+  background-color: peachpuff;
   min-height: 100vh;
   padding: 2em;
 }
@@ -232,6 +235,7 @@ a {
 
 /********* VESTIBULAR ********/
 .vest {
+  background-color: bisque;
   padding: 2em;
   min-height: 120vh;
 }
@@ -271,14 +275,19 @@ a {
 
 /********* CONTATOS *******/
 .contato {
+  background-color: papayawhip;
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  margin-bottom: 2em;
-  min-height: 70vh;
+  min-height: 100vh;
 }
+
+.icons {
+  margin-bottom: 3em;
+}
+
 .contato a {
-  color: orange;
+  color: rgb(235, 200, 145);
   font-size: 3.7em;
 }
 
@@ -287,23 +296,27 @@ a {
 }
 
 a.youtube:hover {
-  color: rgb(202, 16, 16);
+  color: #C4302b;
 }
 
 a.instagram:hover {
-  color: white;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
 }
 
 a.twitter:hover {
-  color: rgb(10, 120, 245);
+  color: #00acee;
 }
 
 a.whats:hover {
-  color: rgb(17, 212, 17); 
+  color: #44c233; 
 }
 
 a.email:hover {
-  color: white;
+  color: rgb(214, 210, 210);
 }
 
 /************ MENU RESPONSSIVO MOBILE *********/
@@ -366,7 +379,16 @@ a.email:hover {
 
 /********* RESPONSSIVO WEB ********/
 @media (min-width: 1200px) {
-  
+
+  /********** BODY *********/
+  body h2 {
+    margin-top: 2em;
+  }
+
+  .fim h3 {
+    font-size: 2em;
+    margin-bottom: .5em;
+  }
   /******* MENU/LOGO ********/
   .img-titulo {
     height: 15vw;
@@ -406,6 +428,7 @@ a.email:hover {
         border-bottom-left-radius: 2vw;
         border-bottom-right-radius: 2vw;
       }
+
     /***** VEST-IFRAME ******/
     @keyframes animavest {
       0% {
@@ -443,14 +466,5 @@ a.email:hover {
             height: 270px;
             border-radius: 10%;
           }
-        }
-
-        body h2 {
-          margin-top: 2em;
-        }
-
-        .fim h3 {
-          font-size: 2em;
-          margin-bottom: .5em;
         }
       }

@@ -6,7 +6,7 @@
 
 /******** ESPECIFICAÇÕES GERAIS ********/
 header {
-  height: 110vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,32 @@ body  {
 }
 
 body h2 {
+  color: orange;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2em;
+  margin-top: 3.5em;
+  text-align: center;
   text-shadow: 3px 2.5px 2.5px rgba(0, 0, 0, 0.2);
+  -webkit-text-stroke-width: .5px;
+  -webkit-text-stroke-color: #000;
+}
+
+body h3 {
+  color: orange;
+  font-family: 'Sacramento', cursive;
+  font-size: 1.7em;
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+body p {
+  color: rgb(255, 255, 255);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1em;
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  text-align: justify;
 }
 
 a {
@@ -63,7 +88,7 @@ a {
   text-align: center;
 }
 
-.site-subtitle {
+.subtitulo h2 {
   color: rgb(250, 179, 27);
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 1.5em;
@@ -71,8 +96,19 @@ a {
   text-align: center;
   -webkit-text-stroke-width: .5px;
   -webkit-text-stroke-color: #000;
+  word-spacing: .2em;
 }
 
+.fim {
+  bottom: 0;
+  position: absolute;
+}
+
+.fim h3 {
+  color: darkorange;
+  font-size: 1.6em;
+  margin-bottom: 0em;
+}
 
 /************* LINK LOGO ***********/
 .logo {
@@ -157,29 +193,11 @@ a {
   padding: 2em;
 }
 
-.acomp h2{
-  color: orange;
-  font-family: 'Sacramento', cursive;
-  font-size: 2em;
-  margin-bottom: 2em;
-  margin-top: 3.5em;
-  text-align: center;
-}
-
 /******** NEWS **********/
 .news {
-  padding: 2em;
   min-height: 100vh;
+  padding: 2em;
 }
-
-.news h2 {
-  font-family: 'Sacramento', cursive;
-  font-size: 2em;
-  margin-bottom: 2em;
-  margin-top: 3.5em;
-  text-align: center;
-  color: orange;
-} 
 
 .news .grid {
   display: grid;
@@ -216,15 +234,6 @@ a {
 .vest {
   padding: 2em;
   min-height: 120vh;
-}
-
-.vest h2 {
-  font-family: 'Sacramento', cursive;
-  font-size: 2em;
-  margin-bottom: 2em;
-  margin-top: 3.5em;
-  text-align: center;
-  color: orange;
 }
 
 .vest .grid {
@@ -434,5 +443,14 @@ a.email:hover {
             height: 270px;
             border-radius: 10%;
           }
+        }
+
+        body h2 {
+          margin-top: 2em;
+        }
+
+        .fim h3 {
+          font-size: 2em;
+          margin-bottom: .5em;
         }
       }
